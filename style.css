@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.todo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 50px;
+    width: 100%;
+}
+
+span {
+    color: red;
+    text-decoration: none;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+li {
+    text-align: left;
+    padding: 5px 0;
+}
+
+button {
+    width: 20%;
+    background-color: orange;
+    border-style: none;
+    height: 50px;
+    border-radius: 25px;
+    outline:none;
+}
+button:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: white
+}
+
+input {
+    width: 80%;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
