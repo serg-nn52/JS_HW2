@@ -68,6 +68,4 @@ clearBtn.addEventListener('click', function(){
 })
 
 deleteTodo();
-
-
 loadTodo();

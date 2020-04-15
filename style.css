@@ -4,11 +4,14 @@ body {
 }
 
 .todo {
+    
+    text-align: center;
+}
+.buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    text-align: center;
 }
 
 h1 {
@@ -25,7 +28,9 @@ span {
     padding-right: 10px;
     cursor: pointer;
 }
-
+ul {
+    width: 100%4;
+}
 li {
     text-align: left;
     padding: 5px 0;
