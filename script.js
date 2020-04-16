@@ -6,6 +6,8 @@ var saveBtn = document.getElementById('save');
 var clearBtn = document.getElementById('clear');
 var aboutBtn = document.getElementById('about');
 var now = new Date();
+var modal = document.getElementById('modal');
+var cl = document.getElementById('close');
 
 
 function deleteTodo(){
@@ -33,7 +35,33 @@ function loadTodo(){
     }
 };
 
+function getAbout() {
+    modal.style.display = 'flex';
+}
 
+/* aboutBtn.onclick = getAbout; */
+
+aboutBtn.addEventListener('click', getAbout);
+
+cl.onclick = function(){
+    modal.style.display = "none";
+} 
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+}
+
+saveBtn.addEventListener('click', function(){
+    localStorage.setItem('todoApplication', ulSpisok.innerHTML);
+});
+
+clearBtn.addEventListener('click', function(){
+    ulSpisok.innerHTML = '';
+    localStorage.setItem('todoApplication', ulSpisok.innerHTML);
+});
 
 /*addEventListener- получение типа события и вызов функции*/ 
 
@@ -51,21 +79,17 @@ inputData.addEventListener('keypress', function(keyPressed){
     }
     overLi(); 
 }
-});
+}); 
 
 
-aboutBtn.addEventListener('click', function(){
-    alert ('Лушкин Сергей Николаевич');
-});
 
-saveBtn.addEventListener('click', function(){
-    localStorage.setItem('todoApplication', ulSpisok.innerHTML);
-});
 
-clearBtn.addEventListener('click', function(){
-    ulSpisok.innerHTML = '';
-    localStorage.setItem('todoApplication', ulSpisok.innerHTML);
-})
+
+/* aboutBtn.addEventListener('click', getAbout); */
+
+
 
 deleteTodo();
 loadTodo();
+overLi(); 
+ 
