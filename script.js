@@ -19,13 +19,13 @@ function deleteTodo(){
     }
 };
 
-function overLi(){
+/* function overLi(){
     for(let oneLi of lis){
         oneLi.addEventListener('click', function(){
             oneLi.style.textDecoration = 'line-through';
         })
     }
-};
+}; */
 
 
 function loadTodo(){
@@ -34,6 +34,15 @@ function loadTodo(){
         deleteTodo();
     }
 };
+
+function addClass(){
+    for(let oneLi of lis){
+        oneLi.addEventListener('click', function(){
+            oneLi.classList.toggle('show');
+        })
+    }
+    /* lis.classList.toggle('show'); */
+}
 
 function getAbout() {
     modal.style.display = 'flex';
@@ -76,8 +85,10 @@ inputData.addEventListener('keypress', function(keyPressed){
         if (newTodo != '') {
             ulSpisok.appendChild(newLi).append(newSpan, newTodo + " Дата и время добавления " + now);
             deleteTodo();
+            addClass();
     }
-    overLi(); 
+    /* overLi();  */
+    
 }
 }); 
 
@@ -91,5 +102,5 @@ inputData.addEventListener('keypress', function(keyPressed){
 
 deleteTodo();
 loadTodo();
-overLi(); 
- 
+/* overLi();  */
+addClass();

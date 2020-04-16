@@ -76,3 +76,7 @@ input {
     display: inline;
     font-size: 20px;
 }
+
+.show {
+    text-decoration: line-through;
+}
