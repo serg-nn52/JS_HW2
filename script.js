@@ -38,15 +38,15 @@ function loadTodo(){
 function addClass(){
     for(let oneLi of lis){
         oneLi.addEventListener('click', function(){
-            oneLi.classList.toggle('show');
-        })
-    }
+            oneLi.classList.add('show');
+        });
+    };
     /* lis.classList.toggle('show'); */
-}
+};
 
 function getAbout() {
     modal.style.display = 'flex';
-}
+};
 
 /* aboutBtn.onclick = getAbout; */
 
@@ -82,14 +82,15 @@ inputData.addEventListener('keypress', function(keyPressed){
 
         var newTodo = this.value; /*получение value из input*/
         this.value = ''; /*Очистка поля ввода*/
-        if (newTodo != '') {
+        if ((newTodo == '')||(newTodo == false)){
+            alert('Введите задачу!!!');
+        } else{
             ulSpisok.appendChild(newLi).append(newSpan, newTodo + " Дата и время добавления " + now);
             deleteTodo();
             addClass();
-    }
+    };
     /* overLi();  */
-    
-}
+};
 }); 
 
 
